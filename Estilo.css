@@ -4,11 +4,10 @@ html, body { margin: 0; padding: 0; }
 body {
   padding: 0 1rem;
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: #e6ffff;                 /* legible sobre fondo oscuro (antes aqua muy chillón) */
+  color: #e6ffff;
   background-color: rgb(28, 29, 92);
 }
 
-/* Título principal (antes usabas 'hl', ahora es h1) */
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: .5px;
@@ -20,7 +19,7 @@ ul.navbar {
   list-style: none;
   padding: .5rem;
   margin: 1rem 0;
-  display: flex;                  /* horizontal simple */
+  display: flex;
   gap: .5rem;
   background: rgba(255,255,255,.06);
   border: 1px solid rgba(255,255,255,.15);
@@ -55,11 +54,9 @@ ul.navbar a.activo {
   line-height: 1.6;
 }
 
-/* ===== Enlaces generales (tipo) ===== */
 a:link     { color: rgb(196, 201, 216); }
 a:visited  { color: rgb(128, 126, 201); }
 
-/* ===== Pie / address (tipo) ===== */
 address {
   display: block;
   margin: 2rem auto 1.5rem;

@@ -4,33 +4,92 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LEIRUS</title>
-  <link rel="stylesheet" href="Estilo.css">
-  
+  <style>
+    /* Estilos básicos */
+    :root{
+      --bg:#1c1d5c; --fg:#e6ffff; --muted:#c6c9d8; --brand:#0ea5a4; --border:#ffffff22;
+    }
+    *{box-sizing:border-box} html,body{margin:0;padding:0}
+    body{font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+    .wrap{max-width:960px;margin:auto;padding:0 16px 40px}
+
+    /* Menú */
+    nav{position:sticky;top:0;background:#ffffff10;border-bottom:1px solid var(--border);backdrop-filter:blur(6px);margin-bottom:16px}
+    nav ul{list-style:none;display:flex;gap:8px;align-items:center;margin:0;padding:10px}
+    nav a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px}
+    nav a:hover{background:#ffffff16;color:#fff}
+
+    /* Secciones */
+    section{border:1px solid var(--border);border-radius:12px;padding:16px;margin:12px 0}
+    h1,h2{margin:.2rem 0 .4rem}
+
+    /* Formulario */
+    form{display:grid;gap:10px;max-width:520px;margin-bottom:1rem}
+    label{font-weight:600}
+    input,button{
+      font:inherit;padding:10px;border-radius:8px;border:1px solid var(--border);background:#ffffff10;color:#fff
+    }
+    button{background:var(--brand);border:none;cursor:pointer}
+    button:hover{filter:brightness(1.05)}
+
+    /* Pie */
+    footer{margin-top:20px;text-align:center;color:#cfe;opacity:.85}
+  </style>
 </head>
 <body>
+  <div class="wrap">
+    <!-- Menú simple -->
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#residencia">Residencia</a></li>
+        <li><a href="#enlaces">Enlaces</a></li>
+      </ul>
+    </nav>
 
-  <!-- Menú de opciones -->
-  <header>
-    <ul class="navbar">
-      <li><a href="index.html" class="activo">Página principal</a></li>
-      <li><a href="formacion.html">Formación educativa</a></li>
-      <li><a href="residencia.html">Lugar de residencia</a></li>
-      <li><a href="enlaces.html">Enlaces formativos</a></li>
-    </ul>
-  </header>
+    <!-- Inicio con formulario -->
+    <section id="inicio">
+      <h1>LEIRUS</h1>
+      <form action="#" method="post">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Ingresa tu nombre" required>
 
-  <!-- Contenido principal -->
-  <main id="principal">
-    <h1>LEIRUS</h1>
-    <p>Bienvenido a nuestro sitio formativo, donde se sueña, se acciona y se logra.</p>
-    <p>Nos ajustamos a tus posibilidades para abrir nuevas oportunidades para ti.</p>
-    <p>Nos capacitamos para ofrecerte lo mejor en formación.</p>
-  </main>
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" name="telefono" type="tel" placeholder="Ingresa tu teléfono">
 
-  <!-- Fecha y autor -->
-  <footer>
-    <address>Creada el 03/09/2025 — Autor: LEIRUS</address>
-  </footer>
+        <label for="correo">Correo electrónico</label>
+        <input id="correo" name="correo" type="email" placeholder="correo@ejemplo.com" required>
 
+        <button type="submit">Enviar</button>
+      </form>
+      <p>Bienvenido a nuestro sitio formativo, donde se sueña, se acciona y se logra.</p>
+      <p>Nos ajustamos a tus posibilidades para abrir nuevas oportunidades para ti.</p>
+      <p>Nos capacitamos para ofrecerte lo mejor en formación.</p>
+    </section>
+
+    <!-- Formación -->
+    <section id="formacion">
+      <h2>Formación educativa</h2>
+      <p>Programas básicos en desarrollo web, móvil e inteligencia artificial.</p>
+    </section>
+
+    <!-- Residencia -->
+    <section id="residencia">
+      <h2>Lugar de residencia</h2>
+      <p>Atendemos de forma remota; soporte y tutorías en línea.</p>
+    </section>
+
+    <!-- Enlaces -->
+    <section id="enlaces">
+      <h2>Enlaces formativos</h2>
+      <p>• <a href="https://developer.mozilla.org/es/" target="_blank" rel="noopener">MDN Web Docs</a></p>
+      <p>• <a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></p>
+    </section>
+
+    <footer>
+      <small>Creada el 03/09/2025 — Autor: LEIRUS</small>
+    </footer>
+  </div>
 </body>
 </html>
